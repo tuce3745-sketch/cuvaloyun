@@ -2,6 +2,7 @@ export interface Customer {
   id: string;
   name: string;
   emoji: string;
+  image: string;
   request: string;
   description: string;
   options: DecisionOption[];
@@ -31,6 +32,10 @@ export interface DailyEvent {
   text: string;
   emoji: string;
 }
+
+export const SHOP_IMAGE = "https://image.qwenlm.ai/generated-images/fd2895a0-bb1f-44eb-80c7-0d32ad845d9b/_result.png";
+export const FOREST_BG = "https://image.qwenlm.ai/generated-images/e7cff739-5630-4a8a-a2b7-408d16cfc506/_result.png";
+export const FINAL_GREEN = "https://image.qwenlm.ai/generated-images/c44a60a2-6b98-4ab6-b7a9-14187165f525/_result.png";
 
 export const dailyEvents: DailyEvent[] = [
   {
@@ -115,7 +120,7 @@ export const weatherEvents: WeatherEvent[] = [
   {
     id: "rain",
     name: "Sağanak Yağmur",
-    description: "Yağmur ormanı serinletti. Müşteriler azaldı ama karbon maliyeti düştü.",
+    description: "Yağmur ormanı serinletti. Karbon maliyeti düştü.",
     emoji: "🌧️",
     carbonMultiplier: 0.7,
     moneyMultiplier: 0.9
@@ -143,6 +148,7 @@ export const customers: Customer[] = [
     id: "giraffe",
     name: "Zürafa",
     emoji: "🦒",
+    image: "https://image.qwenlm.ai/generated-images/b490fce5-bb1a-4ad3-bbfd-d99191785c7c/_result.png",
     request: "Kışın ortasında taze portakal suyu",
     description: "\"Ne olursa olsun bugün portakal içeceğim!\" diyor Zürafa.",
     options: [
@@ -176,6 +182,7 @@ export const customers: Customer[] = [
     id: "tiger",
     name: "Kaplan",
     emoji: "🐯",
+    image: "https://image.qwenlm.ai/generated-images/a338748e-4f0f-491f-a928-401c161c2acf/_result.png",
     request: "Uzak diyarlardan ithal avokadolu tost",
     description: "\"Bunu bana hemen hazırla. Başka bir şey istemiyorum.\" diyor Kaplan.",
     options: [
@@ -209,6 +216,7 @@ export const customers: Customer[] = [
     id: "squirrel",
     name: "Fidancı Sincap",
     emoji: "🐿️",
+    image: "https://image.qwenlm.ai/generated-images/76e37973-efb6-4153-ad65-a784c744cbd5/_result.png",
     request: "Sana bir fidan bırakmak istiyor",
     description: "\"Bu fidan bugün sana büyük kazanç sağlamayacak. Ama onu büyütürsen zamanla ormana nefes aldırabilir.\"",
     options: [
@@ -242,6 +250,7 @@ export const customers: Customer[] = [
     id: "bear",
     name: "Kömürcü Ayı",
     emoji: "🐻",
+    image: "https://image.qwenlm.ai/generated-images/45ee376a-5117-4740-a1e4-4e12d5ac7a84/_result.png",
     request: "Sana kömür jeneratörü teklif ediyor",
     description: "\"Bu jeneratör dükkânını aydınlatır, müşterileri çeker. Ama dumanı da ormana yayılır.\"",
     options: [
@@ -275,6 +284,7 @@ export const customers: Customer[] = [
     id: "rabbit",
     name: "Tavşan",
     emoji: "🐰",
+    image: "https://image.qwenlm.ai/generated-images/5fe79305-97c9-4331-b439-812727001516/_result.png",
     request: "Mevsimlik sebzelerden salata",
     description: "\"Mevsiminde ne varsa onu yerim\" diyor Tavşan. \"Doğala bayılırım.\"",
     options: [
@@ -308,6 +318,7 @@ export const customers: Customer[] = [
     id: "hedgehog",
     name: "Kirpi",
     emoji: "🦔",
+    image: "https://image.qwenlm.ai/generated-images/5fe79305-97c9-4331-b439-812727001516/_result.png",
     request: "Yerel orman balı ve ceviz",
     description: "\"Komşu arıcının balını isterim. Uzaklardan geleni değil.\"",
     options: [
@@ -341,6 +352,7 @@ export const customers: Customer[] = [
     id: "deer",
     name: "Geyik",
     emoji: "🦌",
+    image: "https://image.qwenlm.ai/generated-images/b490fce5-bb1a-4ad3-bbfd-d99191785c7c/_result.png",
     request: "Uzak diyarlardan gelen egzotik baharatlar",
     description: "\"Yemeklerime farklı tatlar katmak istiyorum. En pahalısından olsun.\"",
     options: [
@@ -374,6 +386,7 @@ export const customers: Customer[] = [
     id: "owl_teacher",
     name: "Öğretmen Baykuş",
     emoji: "🦉",
+    image: "https://image.qwenlm.ai/generated-images/aa028677-6f3c-41dc-b3f8-399c3adf0aae/_result.png",
     request: "Sana karbon defterini göstermek istiyor",
     description: "\"Bir kararın yalnızca fiyatına bakarsan maliyetinin tamamını göremezsin.\"",
     options: [
@@ -407,6 +420,7 @@ export const customers: Customer[] = [
     id: "fox",
     name: "Tilki",
     emoji: "🦊",
+    image: "https://image.qwenlm.ai/generated-images/a338748e-4f0f-491f-a928-401c161c2acf/_result.png",
     request: "Ucuz ama uzaklardan gelen atıştırmalık",
     description: "\"En ucuzunu ver bana. Markası ne olursa olsun, yeter ki ucuz olsun.\"",
     options: [
@@ -440,6 +454,7 @@ export const customers: Customer[] = [
     id: "elephant",
     name: "Fil",
     emoji: "🐘",
+    image: "https://image.qwenlm.ai/generated-images/45ee376a-5117-4740-a1e4-4e12d5ac7a84/_result.png",
     request: "Toplu sipariş - dükkânın tüm stoğunu almak istiyor",
     description: "\"Her şeyi alıyorum. Fiyatı yüksek olsun, yeter ki her şeyi verebilesin.\"",
     options: [
@@ -470,6 +485,9 @@ export const customers: Customer[] = [
     ]
   }
 ];
+
+export const KUNDUZ_IMAGE = "https://image.qwenlm.ai/generated-images/90c1c469-71e6-4e0d-93d7-4998f48f6229/_result.png";
+export const OWL_IMAGE = "https://image.qwenlm.ai/generated-images/aa028677-6f3c-41dc-b3f8-399c3adf0aae/_result.png";
 
 export const storyIntro = [
   {
@@ -506,19 +524,19 @@ export const storyIntro = [
 
 export const endings = {
   green: {
-    title: "🌿 Yeşeren Orman",
+    title: "Yeşeren Orman",
     subtitle: "Final A",
     text: "Karbonunu düşük tutmayı başardın ve dükkânı ayakta tuttun. Kasabanın diğer esnafı da senin yöntemlerini merak etmeye başladı. Artık yalnızca bir dükkânın değil, yeni bir alışkanlığın da sahibisin. Orman sana teşekkür ediyor.",
     emoji: "🌳✨"
   },
   gold: {
-    title: "💰 Altın Kasa, Ağır Çuval",
+    title: "Altın Kasa, Ağır Çuval",
     subtitle: "Final B",
     text: "Hedef paraya ulaştın, ama çuvalın ağır. Dükkânı kazandın; yine de ormanın geleceği için ödenmesi gereken bir bedel var. Gerçek başarıya ulaşmak için iş yapma biçimini yeniden düşünmen gerekiyor.",
     emoji: "⚖️"
   },
   closed: {
-    title: "🚪 Kapanan Kepenkler",
+    title: "Kapanan Kepenkler",
     subtitle: "Final C",
     text: "On günü tamamlayamadın. Belki kısa vadeli kazanca fazla güvendin, belki de müşterilerle kurduğun dengeyi kaybettin. Fakat hikâye burada bitmiyor: Artık hangi kararların seni zor durumda bıraktığını biliyorsun. Bir sonraki denemede farklı bir strateji kurabilirsin.",
     emoji: "🔄"
